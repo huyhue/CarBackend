@@ -8,10 +8,10 @@ import javax.validation.constraints.NotNull;
 public class Location {
 
     @NotNull
-    private Double lat;
+    private Double latitude;
 
     @NotNull
-    private Double lon;
+    private Double longitude;
 
     @Transient
     private String address;
@@ -28,17 +28,17 @@ public class Location {
     public Location() {
     }
 
-    public Location(Double lat, Double lon) {
-        this.lat = lat;
-        this.lon = lon;
+    public Location(Double latitude, Double longitude) {
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
-    public Double getLat() {
-        return lat;
+    public Double getLatitude() {
+        return latitude;
     }
 
-    public Double getLon() {
-        return lon;
+    public Double getLongitude() {
+        return longitude;
     }
 
     public String getAddress() {

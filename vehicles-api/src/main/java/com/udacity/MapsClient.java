@@ -16,8 +16,8 @@ public class MapsClient {
 	}
 
 	public Location getAddress(Location lo) {
-		Address ad = cl.get().uri(uriBuilder -> uriBuilder.path("/maps/").queryParam("lat", lo.getLat())
-				.queryParam("lon", lo.getLon()).build()).retrieve().bodyToMono(Address.class).block();
+		Address ad = cl.get().uri(uriBuilder -> uriBuilder.path("/maps/").queryParam("latitude", lo.getLatitude())
+				.queryParam("longitude", lo.getLongitude()).build()).retrieve().bodyToMono(Address.class).block();
 		ma.map(Objects.requireNonNull(ad), lo);
 		return lo;
 	}

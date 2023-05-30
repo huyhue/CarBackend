@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PricingController {
     @GetMapping("/services/price")
-    public Price get(@RequestParam Long vehicleId) throws PriceException{
-            return PricingService.getPrice(vehicleId);
+    public Price get(@RequestParam Long id) throws PriceException{
+            return PricingService.getPrice(id);
     }
 }
